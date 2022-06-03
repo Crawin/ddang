@@ -28,7 +28,7 @@ public class Tile : MonoBehaviour
             if (character.leftPaint > 0)
                 material.color = new Color32(0, 0, 255, 0);
         }
-        if(collision.gameObject.name == "Bot")
+        if(collision.gameObject.tag == "Bot")
         {
             material.color = new Color32(255, 0, 0, 0);
         }

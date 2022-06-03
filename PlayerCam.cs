@@ -6,16 +6,15 @@ public class PlayerCam : MonoBehaviour
 {
     Transform PlayerTransform;
     Vector3 Offset;
-    float Angle;
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         PlayerTransform = GameObject.Find("Player").transform;
         Offset = transform.position - PlayerTransform.position;
     }
     private void Update()
     {
-        Rotate();
     }
 
     void LateUpdate()
@@ -28,13 +27,8 @@ public class PlayerCam : MonoBehaviour
 
     void Rotate()
     {
-        if (Input.GetMouseButton(0))
-        {
-            float mx = Input.GetAxisRaw("Mouse X");
-            Angle += mx;
-            Debug.Log(mx);
-            transform.RotateAround(PlayerTransform.position, Vector3.up, mx);
-            Offset = transform.position - PlayerTransform.position;
-        }
+        float mx = Input.GetAxis("Mouse X");
+        transform.RotateAround(PlayerTransform.position, Vector3.up, mx);
+        Offset = transform.position - PlayerTransform.position;
     }
 }
