@@ -27,8 +27,7 @@ public class PlayerCharacter : MonoBehaviour
         rigid.AddForce(vec, ForceMode.Impulse);
         if (transform.position.y < -1)
         {
-            Debug.Log("Ãß¶ô");
-            transform.position = new Vector3(-4.5f, 0.5f, -4.5f);
+            transform.position = new Vector3(-9.5f, 0.5f, -9.5f);
             rigid.velocity = Vector3.zero;
         }
     }
@@ -36,7 +35,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bot")
         {
-            transform.position = new Vector3(-4.5f, 0.5f, -4.5f);
+            transform.position = new Vector3(-9.5f, 0.5f, -9.5f);
             rigid.velocity = Vector3.zero;
             leftPaint /= 2;
         }

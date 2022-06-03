@@ -8,7 +8,7 @@ public class PaintItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(Random.Range(-4.5f, 14.6f), 0.5f, Random.Range(-4.5f, 14.6f));
+        transform.position = new Vector3(Random.Range(-9.5f, 9.6f), 0.5f, Random.Range(-9.5f, 9.6f));
     }
 
     // Update is called once per frame

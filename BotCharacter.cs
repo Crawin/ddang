@@ -10,7 +10,7 @@ public class BotCharacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(14.5f, 0.5f, 14.5f);
+        transform.position = new Vector3(9.5f, 0.5f, 9.5f);
         rigid = GetComponent<Rigidbody>();
         playerTransform = GameObject.Find("Player").transform;
     }
@@ -26,8 +26,7 @@ public class BotCharacter : MonoBehaviour
         rigid.AddForce(Dir.normalized * 2);
         if (transform.position.y < -1)
         {
-            Debug.Log("Bot Ãß¶ô");
-            transform.position = new Vector3(14.5f, 0.5f, 14.5f);
+            transform.position = new Vector3(9.5f, 0.5f, 9.5f);
             rigid.velocity = Vector3.zero;
         }
     }

@@ -28,9 +28,8 @@ public class rezenItem : MonoBehaviour
             {
                 if (!child.active)
                 {
-                    Debug.Log("ÇÏ³ª ¸®Á¨");
                     child.SetActive(true);
-                    child.transform.position = new Vector3(Random.Range(-4.5f, 14.6f), 0.5f, Random.Range(-4.5f, 14.6f));
+                    child.transform.position = new Vector3(Random.Range(-9.5f, 9.6f), 0.5f, Random.Range(-9.5f, 9.6f));
                 }
             }
         }
